@@ -1,5 +1,6 @@
 \documentclass[10pt,letterpaper]{article}
-\usepackage[margin=0.70in]{geometry}
+\usepackage[margin=0.90in]{geometry}
+\geometry{left=0.90in,bottom=0.90in}
 \usepackage{enumitem}
 \usepackage{tabularx}
 \usepackage{hyperref}
@@ -11,7 +12,8 @@
 \titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{-4pt}\rule{\textwidth}{0.4pt}]
 \titlespacing*{\section}{0pt}{8pt}{5pt}
 \setlist[itemize]{leftmargin=1.15em,itemsep=1.5pt,topsep=1pt,parsep=0pt,partopsep=0pt}
-\newcommand{\heading}[2]{\vspace{2pt}\begin{tabularx}{\textwidth}{@{}Xr@{}}\textbf{#1} & \textit{#2}\end{tabularx}}
+\newcommand{\heading}[2]{\vspace{2pt}\begin{tabularx}{\textwidth}{@{}Xr@{}}\textbf{#1} & \textit{#2}\end{tabularx}\vspace{-0pt}}
+\newcommand{\headingwtitle}[3]{\vspace{2pt}\begin{tabularx}{\textwidth}{@{}Xr@{}}\textbf{#1} & #3\\[1pt] \textit{#2} & \end{tabularx}\vspace{-0pt}}
 
 \begin{document}
 \begin{center}
@@ -19,7 +21,7 @@
 Bellevue, WA \quad $\cdot$ \quad
 \href{mailto:kebei.jiang13@gmail.com}{kebei.jiang13@gmail.com} \quad $\cdot$ \quad
 (225) 200-4286 \quad $\cdot$ \quad
-\href{https://www.linkedin.com/in/kebeijiang/}{linkedin.com/in/kebeijiang}
+\href{https://www.linkedin.com/in/kebeijiang}{linkedin.com/in/kebeijiang}
 \end{center}
 \vspace{-3pt}
 
@@ -34,8 +36,7 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 \textbf{Technical:} Python $\cdot$ R $\cdot$ SQL/MySQL $\cdot$ PyTorch $\cdot$ Hugging Face $\cdot$ spaCy $\cdot$ vLLM $\cdot$ FastAPI $\cdot$ Docker $\cdot$ GitHub $\cdot$ Azure $\cdot$ GCP
 
 \section*{Experience}
-\heading{Microsoft}{Jan 2020 -- Sep 2026}
-\textit{Senior Applied Scientist}
+\headingwtitle{Microsoft}{Senior Applied Scientist}{Jan 2020 -- Sep 2026}
 \begin{itemize}
 \item Developed and deployed LLM and VLM solutions spanning agentic AI, RAG, knowledge mining, information extraction, prompt engineering, and model fine-tuning.
 \item Designed evaluation methodologies and experiments for LLM-based agents and AI systems, including synthetic benchmarks, behavioral diagnostics, quantitative metrics, and regression evaluation.
@@ -44,24 +45,23 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 \item Led technical development across scientists, PMs, engineers, architects, and customer engineers, including technical design, implementation reviews, technical decisions, and customer engagements.
 \end{itemize}
 
-\heading{Viridien}{Jan 2015 -- Jan 2020}
-\textit{Applied Scientist}
+\headingwtitle{Viridien}{Applied Scientist}{Jan 2015 -- Jan 2020}
 \begin{itemize}
 \item Applied statistical and machine-learning methods to process and model large-scale (TB) seismic data.
 \item Developed CNN-based solutions for seismic interpretation, including pixel-level identification of subsurface salt structures.
 \end{itemize}
 
 \section*{Selected Projects \& Research}
+
+\textbf{Work Projects}
+
 \heading{Specification-to-Calibration: Synthetic Supervision for LLM Judges}{2026}
-\textit{Submitted to JUDGe @ NeurIPS 2026}
-\vspace{-5pt}
 \begin{itemize}
 \item Developed a method for automating LLM judge calibration: compiled natural-language specifications into coverage-controlled positive/negative examples, using targeted behavioral contrasts to revise rubrics while holding the judge model fixed.
 \item Improved position-debiased accuracy by 3.58 $\pm$ 0.58 pp on LLMBar; feedback-conditioned and GEPA-based calibration also improved balanced accuracy on BigCodeBench.
 \end{itemize}
 
 \heading{Period-Closing Skill --- Stateful, Multi-Turn Agent Evaluation}{2026}
-\vspace{-5pt}
 \begin{itemize}
 \item Designed 30+ reusable scenario templates covering diverse failure modes for an LLM agent that automates period-closing workflows involving due dates, calendars, worker assignment, and task dependencies; reviewed cases with the PM to validate representative scenarios.
 \item Parameterized scenarios across variables such as company names, task titles, worker names, dates, schedules, and dependencies to create diverse concrete test instances without manually designing every case.
@@ -70,7 +70,6 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 \end{itemize}
 
 \heading{Account Reconciliation Agent --- Synthetic Benchmark \& Adaptive Preference Monitoring}{2026}
-\vspace{-5pt}
 \begin{itemize}
 \item Built an evaluation framework for an LLM agent resolving 400+ reconciliation exceptions between ledger and subledger using synthetic accounting workflows with ground-truth resolutions and tool-use paths.
 \item Identified an unrealistic uniform distribution of matching cases, validated the expected distribution with the PM and statistical analysis, and recalibrated synthetic data generation; used the resulting benchmark as a fixed offline regression set.
@@ -79,7 +78,6 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 \end{itemize}
 
 \heading{VLM Fine-Tuning --- Taxonomy Generalization \& Shortcut-Learning Diagnostic}{2025}
-\vspace{-5pt}
 \begin{itemize}
 \item Designed a hierarchical taxonomy spanning hundreds of fashion-item classes and aligned it with GPT-4o's understanding of retail products; generated $\sim$1M synthetic training examples and fine-tuned an open-source VLM with LoRA, SFT, and DPO.
 \item Designed a controlled diagnostic to investigate what the model learned: after updating class names such as ``sneaker'' to ``trainer,'' the fine-tuned model failed to adopt the changes while the base model adapted, exposing taxonomy memorization.
@@ -87,7 +85,6 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 \end{itemize}
 
 \heading{Multimodal RAG --- Financial Insights Copilot}{2024}
-\vspace{-5pt}
 \begin{itemize}
 \item Built an end-to-end RAG system for content-rich financial PDFs, spanning document parsing, multimodal indexing, embeddings, retrieval, query decomposition, and knowledge-graph exploration; released as part of Microsoft Financial Insights Copilot.
 \item Identified table-parsing issues in complicated financial documents and explored normalization strategies for downstream processing; systematically evaluated BM25 configurations and reranking models, improving offline retrieval by $\sim$20\%.
@@ -95,8 +92,7 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 \item Fine-tuned a Phi-3 Vision model on public chart datasets for visual question answering.
 \end{itemize}
 
-\heading{End-to-End Knowledge Mining --- Multimodal Document Processing}{2022 -- 2023}
-\vspace{-5pt}
+\heading{End-to-End Knowledge Mining --- Multimodal Document Processing}{2022--2023}
 \begin{itemize}
 \item Led development of an end-to-end knowledge-mining solution for large multimodal document collections in the energy domain using Azure Cognitive Search.
 \item Designed and optimized indexing flows and custom AI skills spanning chart detection, document classification, entity recognition, and summarization; led a team of scientists and collaborated with PMs, customer engineers, and customers.
@@ -105,17 +101,24 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 \end{itemize}
 
 \heading{Rule-Based NER with spaCy}{2021}
-\vspace{-5pt}
 \begin{itemize}
 \item Developed a rule-based entity extraction system for geo-location entities in Oil \& Gas documents, including class identification and post-processing to reduce false positives from overlapping and ambiguous names.
 \item Achieved over 80\% accuracy and implemented the solution as a custom skill in Azure Cognitive Search.
 \end{itemize}
 
 \heading{Automatic Seismic Salt Interpretation}{2018}
-\vspace{-5pt}
 \begin{itemize}
 \item Used a U-Net architecture to identify salt structures at pixel level in seismic data.
 \item Implemented stratified folding, ELU, and Lovasz Loss to improve precision; work was accepted by the 3rd International Conference on Information System \& Data Mining.
+\end{itemize}
+
+\section*{Personal Projects}
+
+\heading{OptiBuild --- Domain-Agnostic Optimization Agent | Personal Project}{2026}
+\begin{itemize}
+\item Built a domain-agnostic multi-agent system that converts natural-language optimization requests into structured Operations Research models, evaluates model completeness and intent fidelity, and solves them using CP-SAT with TOPSIS-based multi-objective ranking.
+\item Designed a staged modelization and repair loop with Pydantic contracts, deterministic validation, LLM-based intent evaluation, structured execution traces, and failure handling for missing data, infeasible models, and clarification needs.
+\item Implemented automated testing and security controls, including 127 offline tests, PII redaction, an explicit safety gate, and constrained handling of LLM-generated formulas, queries, and data-cleaning operations.
 \end{itemize}
 
 \section*{Selected Technical Learning}
@@ -123,24 +126,25 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 \begin{itemize}
 \item Implemented major components of language-model development, including tokenization, FlashAttention2 in Triton, data filtering, and pre-/post-training methods including GRPO.
 \end{itemize}
+
 \heading{Neural Networks: Zero to Hero, Andrej Karpathy}{2023}
 \begin{itemize}
 \item Implemented a Transformers-based English--Spanish translator from scratch and trained it on the Helsinki-NLP/opus-100 dataset.
 \end{itemize}
+
 \heading{Reinforcement Learning Specialization, Coursera}{2023}
 \begin{itemize}
 \item Completed the specialization to deepen understanding of reinforcement learning motivated by the use of RLHF in LLM development.
 \end{itemize}
 
 \section*{Education}
-\heading{Louisiana State University, Baton Rouge, LA}{2007 -- 2014}
-\textit{PhD, Physics}
+\headingwtitle{Louisiana State University, Baton Rouge, LA}{PhD, Physics}{2007 -- 2014}
 
 \section*{Publications}
 \begin{itemize}
 \item Guang Yang, Kebei Jiang, David P. Lundquist, Prerna Singh. \textit{Specification-to-Calibration: Synthetic Supervision for LLM Judges.} Submitted to JUDGe @ NeurIPS 2026.
 \item Moschoula Pternea, Prerna Singh, Abir Chakraborty, Yagna Oruganti, Mirco Milletari, Sayli Bapat, Kebei Jiang. \textit{The RL/LLM Taxonomy Tree: Reviewing Synergies Between Reinforcement Learning and Large Language Models.} Journal of Artificial Intelligence Research, 2024. DOI: 10.1613/jair.1.15960.
-\item Yu Zeng, Kebei Jiang, Jie Chen. \textit{Automatic Seismic Salt Interpretation with Deep Convolutional Neural Networks.} Proceedings of the 2019 3rd International Conference on Information System and Data Mining, pp. 16--20.
+\item Yu Zeng, Kebei Jiang, Jie Chen. \textit{Automatic Seismic Salt Interpretation with Deep Convolutional Neural Networks.} Proceedings of the 2019 3rd International Conference on Information System \& Data Mining, pp. 16--20.
 \end{itemize}
 
 \section*{Patent}
