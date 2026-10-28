@@ -29,11 +29,15 @@ Bellevue, WA \quad $\cdot$ \quad
 Applied scientist with 10+ years of experience in AI/ML research, quantitative experimentation, and end-to-end systems. Recent work spans LLM/VLM development, agent evaluation, synthetic benchmarks, LLM-as-a-judge calibration, RAG, multimodal document understanding, and model fine-tuning. Experienced in developing evaluation methodologies, designing controlled experiments, building production-oriented AI systems, and solving ambiguous problems across research and applied settings.
 
 \section*{Core Expertise}
-\textbf{AI/ML:} LLMs $\cdot$ VLMs $\cdot$ Generative AI $\cdot$ Model fine-tuning $\cdot$ RAG $\cdot$ Agentic AI $\cdot$ Deep Learning $\cdot$ NLP
+\textbf{AI/ML:} LLMs $\cdot$ VLMs $\cdot$ Generative AI $\cdot$ Model Fine-Tuning $\cdot$ RAG $\cdot$ Agentic Systems $\cdot$ Deep Learning $\cdot$ NLP
 
-\textbf{Evaluation \& Data:} LLM-as-a-judge calibration $\cdot$ Agent evaluation $\cdot$ Synthetic data $\cdot$ Evaluation benchmarks $\cdot$ Experiment design $\cdot$ Statistical modeling $\cdot$ Data analysis
+\textbf{Prompt Engineering \& Optimization:} Prompt Design $\cdot$ Specification-Driven Prompting $\cdot$ Algorithmic Prompt Optimization
 
-\textbf{Technical:} Python $\cdot$ R $\cdot$ SQL/MySQL $\cdot$ PyTorch $\cdot$ Hugging Face $\cdot$ spaCy $\cdot$ vLLM $\cdot$ FastAPI $\cdot$ Docker $\cdot$ GitHub $\cdot$ Azure $\cdot$ GCP
+\textbf{Evaluation \& Data:} LLM-as-a-Judge Calibration $\cdot$ Systematic Agent Evaluation $\cdot$ Synthetic Data Generation $\cdot$ Evaluation Benchmarks $\cdot$ Experiment Design $\cdot$ Statistical Modeling $\cdot$ Data Analysis
+
+\textbf{ML Frameworks \& Serving:} PyTorch $\cdot$ HF Transformers $\cdot$ Distributed Training $\cdot$ Model Deployment \& Serving $\cdot$ vLLM $\cdot$ spaCy
+
+\textbf{Tools \& Infrastructure:} Python $\cdot$ R $\cdot$ SQL $\cdot$ FastAPI $\cdot$ Docker $\cdot$ Git $\cdot$ Azure $\cdot$ GCP
 
 \section*{Experience}
 \headingwtitle{Microsoft}{Senior Applied Scientist}{Jan 2020 -- Sep 2026}
@@ -71,15 +75,15 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 
 \heading{Account Reconciliation Agent --- Synthetic Benchmark \& Adaptive Preference Monitoring}{2026}
 \begin{itemize}
-\item Built an evaluation framework for an LLM agent resolving 400+ reconciliation exceptions between ledger and subledger using synthetic accounting workflows with ground-truth resolutions and tool-use paths.
-\item Identified an unrealistic uniform distribution of matching cases, validated the expected distribution with the PM and statistical analysis, and recalibrated synthetic data generation; used the resulting benchmark as a fixed offline regression set.
-\item Measured task success, tool-call accuracy/order/count, latency, and run-to-run consistency across repeated evaluations.
-\item Designed an adaptive preference-monitoring POC using synthetic data with shifting user-preference distributions: trained a tree-based model on a previous window of exception features and user-selected actions, evaluated it on the current window, and triggered retraining when accuracy fell below a PM-approved 90\% threshold.
+\item Developed an accounting agent deployed to real users to resolve ledger--subledger reconciliation exceptions.
+\item Analyzed production telemetry to identify shifts in user behavior and built a proof of concept demonstrating the agent's ability to adapt.
+\item Built a synthetic benchmark with hundreds of LLM-generated transaction exceptions and ground-truth resolutions and tool-use paths; evaluated task success, tool-call accuracy, latency, and consistency across five runs.
+\item Improved benchmark realism by validating transaction-matching distributions with the PM, substantially improving evaluation results and establishing fixed offline regression tests.
 \end{itemize}
 
 \heading{VLM Fine-Tuning --- Taxonomy Generalization \& Shortcut-Learning Diagnostic}{2025}
 \begin{itemize}
-\item Designed a hierarchical taxonomy spanning hundreds of fashion-item classes and aligned it with GPT-4o's understanding of retail products; generated $\sim$1M synthetic training examples and fine-tuned an open-source VLM with LoRA, SFT, and DPO.
+\item Designed a hierarchical taxonomy spanning hundreds of fashion-item classes and aligned it with GPT-4o's understanding of retail products; generated $\sim$1M synthetic training examples and fine-tuned an open-source VLM using PyTorch across multiple GPUs with LoRA, SFT, and DPO.
 \item Designed a controlled diagnostic to investigate what the model learned: after updating class names such as ``sneaker'' to ``trainer,'' the fine-tuned model failed to adopt the changes while the base model adapted, exposing taxonomy memorization.
 \item Achieved $\sim$90\% accuracy against GPT-4o ground truths; used the diagnostic to motivate separating domain adaptation from taxonomy alignment through distinct training strategies.
 \end{itemize}
@@ -116,7 +120,7 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 
 \heading{OptiBuild --- Domain-Agnostic Optimization Agent | Personal Project}{2026}
 \begin{itemize}
-\item Built a domain-agnostic multi-agent system that converts natural-language optimization requests into structured Operations Research models, evaluates model completeness and intent fidelity, and solves them using CP-SAT with TOPSIS-based multi-objective ranking.
+\item Built a domain-agnostic multi-agent system that translates natural-language optimization requests into structured Operations Research models, evaluates model completeness and intent fidelity, and solves them using CP-SAT with TOPSIS-based multi-objective ranking.
 \item Designed a staged modelization and repair loop with Pydantic contracts, deterministic validation, LLM-based intent evaluation, structured execution traces, and failure handling for missing data, infeasible models, and clarification needs.
 \item Implemented automated testing and security controls, including 127 offline tests, PII redaction, an explicit safety gate, and constrained handling of LLM-generated formulas, queries, and data-cleaning operations.
 \end{itemize}
