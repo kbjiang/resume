@@ -61,14 +61,14 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 
 \heading{Specification-to-Calibration: Synthetic Supervision for LLM Judges}{2026}
 \begin{itemize}
-\item Developed a method for automating LLM judge calibration: compiled natural-language specifications into coverage-controlled positive/negative examples, using targeted behavioral contrasts to revise rubrics while holding the judge model fixed.
-\item Improved position-debiased accuracy by 3.58 $\pm$ 0.58 pp on LLMBar; feedback-conditioned and GEPA-based calibration also improved balanced accuracy on BigCodeBench.
+\item Designed and evaluated a novel algorithmic approach for automated LLM judge calibration by compiling natural-language specifications into coverage-controlled behavioral contrast suites.
+\item Utilized feedback-conditioned and GEPA-based optimization to empirically demonstrate model adaptation, improving position-debiased accuracy by 3.58 pp on LLMBar benchmarks.
 \end{itemize}
 
 \heading{Period-Closing Skill --- Stateful, Multi-Turn Agent Evaluation}{2026}
 \begin{itemize}
 \item Developed an agentic skill for automating period-closing workflows involving due dates, calendars, worker assignments, and task dependencies.
-\item Built an evaluation framework with 30+ reusable, parameterized scenario templates covering diverse failure modes; collaborated with the PM to validate scenario realism and coverage.
+\item Built an evaluation framework with 30+ reusable, parameterized scenario templates covering diverse failure modes; collaborated with the SMEs to validate scenario realism and coverage.
 \item Created stateful, multi-turn test environments with pre-existing tasks, calendar constraints, and similarly named workers; simulated user responses to assess agent behavior across interaction turns.
 \item Evaluated both final task outcomes and agent execution traces across repeated runs; measured task success rate (TSR), tool-call accuracy, latency, token cost, and consistency.
 \end{itemize}
@@ -83,16 +83,16 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 
 \heading{VLM Fine-Tuning --- Taxonomy Generalization \& Shortcut-Learning Diagnostic}{2025}
 \begin{itemize}
-\item Designed a hierarchical taxonomy spanning hundreds of fashion-item classes and aligned it with GPT-4o's understanding of retail products; generated $\sim$1M synthetic training examples and fine-tuned an open-source VLM using PyTorch across multiple GPUs with LoRA, SFT, and DPO.
-\item Designed a controlled diagnostic to investigate what the model learned: after updating class names such as ``sneaker'' to ``trainer,'' the fine-tuned model failed to adopt the changes while the base model adapted, exposing taxonomy memorization.
-\item Achieved $\sim$90\% accuracy against GPT-4o ground truths; used the diagnostic to motivate separating domain adaptation from taxonomy alignment through distinct training strategies.
+\item Designed a hierarchical taxonomy spanning hundreds of fashion-item classes and aligned it with GPT-4o's understanding of retail products; generated $\sim$1M synthetic training examples 
+\item Fine-tuned a Microsoft Phi-4-multimodal foundation model (5.6B) using PyTorch across multiple GPUs with LoRA, SFT, and DPO. Achieved $\sim$90\% accuracy against GPT-4o ground truths
+\item Designed a rigorous, controlled diagnostic to analyze shortcut learning and taxonomy memorization, evaluating the limits of domain adaptation versus base model behavior.
 \end{itemize}
 
 \heading{Multimodal RAG --- Financial Insights Copilot}{2024}
 \begin{itemize}
 \item Built an end-to-end RAG system for content-rich financial PDFs, spanning document parsing, multimodal indexing, embeddings, retrieval, query decomposition, and knowledge-graph exploration; released as part of Microsoft Financial Insights Copilot.
 \item Identified table-parsing issues in complicated financial documents and explored normalization strategies for downstream processing; systematically evaluated BM25 configurations and reranking models, improving offline retrieval by $\sim$20\%.
-\item Explored separate text/table/image indices, ranking fusion, CLIP/SigLIP cross-modal matching, LlamaIndex query decomposition, and knowledge-graph/tree-based approaches including RAPTOR, KPG, and GraphRAG.
+\item Explored separate text/table/image indices, ranking fusion, CLIP/SigLIP cross-modal matching, LlamaIndex query decomposition, and knowledge-graph/tree-based approaches including RAPTOR, KPG and GraphRAG.
 \item Fine-tuned a Phi-3 Vision model on public chart datasets for visual question answering.
 \end{itemize}
 
@@ -120,19 +120,23 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 
 \heading{OptiBuild --- Domain-Agnostic Optimization Agent | Personal Project}{2026}
 \begin{itemize}
-\item Built a domain-agnostic multi-agent system that translates natural-language optimization requests into structured Operations Research models, evaluates model completeness and intent fidelity, and solves them using CP-SAT with TOPSIS-based multi-objective ranking.
-\item Designed a staged modelization and repair loop with Pydantic contracts, deterministic validation, LLM-based intent evaluation, structured execution traces, and failure handling for missing data, infeasible models, and clarification needs.
-\item Implemented automated testing and security controls, including 127 offline tests, PII redaction, an explicit safety gate, and constrained handling of LLM-generated formulas, queries, and data-cleaning operations.
+\item Engineered a domain-agnostic multi-agent system that translates natural-language constraints into structured Operations Research models, enabling optimized component selection across arbitrary domains (e.g., PC hardware, drone components).
+\item Developed an orchestration pipeline utilizing Gemini and CP-SAT with TOPSIS-based multi-objective ranking to evaluate intent fidelity and systematically solve for Pareto-optimal configurations.
+\item Designed a staged modelization and repair loop utilizing Pydantic contracts, deterministic validation protocols, and structured execution traces to handle infeasible models or missing data dynamically.
+\item Implemented rigorous automated testing and security controls, incorporating a 127-case offline regression suite, PII redaction layers, and strict safety gates for execution-level LLM queries and formulas.
 \end{itemize}
 
 \section*{Selected Technical Learning}
 \heading{CS336: Language Modeling from Scratch, Stanford}{2025}
 \begin{itemize}
-\item Implemented major components of language-model development, including tokenization, FlashAttention2 in Triton, data filtering, and pre-/post-training methods including GRPO.
+\item Implemented core components of large language models from scratch using PyTorch, including custom tokenization pipelines, Transformers architecture and pre-training data filtering diagnostics.
+\item Built and verified low-level architectural layers, including implementing FlashAttention-2 mechanics using Triton kernels.
+\item Programmed post-training alignment algorithms from scratch, including implementations of GRPO, DPO, and SFT frameworks.
 \end{itemize}
 
 \heading{Neural Networks: Zero to Hero, Andrej Karpathy}{2023}
 \begin{itemize}
+\item Programmed foundational deep learning architectures from scratch using PyTorch, including implementations of micrograd, Bigram, and Multi-Layer Perceptron (MLP) layers.
 \item Implemented a Transformers-based English--Spanish translator from scratch and trained it on the Helsinki-NLP/opus-100 dataset.
 \end{itemize}
 
@@ -146,7 +150,7 @@ Applied scientist with 10+ years of experience in AI/ML research, quantitative e
 
 \section*{Publications}
 \begin{itemize}
-\item Guang Yang, Kebei Jiang, David P. Lundquist, Prerna Singh. \textit{Specification-to-Calibration: Synthetic Supervision for LLM Judges.} Submitted to JUDGe @ NeurIPS 2026.
+\item Guang Yang, Kebei Jiang, David P. Lundquist, Prerna Singh. \textit{Specification-to-Calibration: Synthetic Supervision for LLM Judges.} Manuscript in Preparation.
 \item Moschoula Pternea, Prerna Singh, Abir Chakraborty, Yagna Oruganti, Mirco Milletari, Sayli Bapat, Kebei Jiang. \textit{The RL/LLM Taxonomy Tree: Reviewing Synergies Between Reinforcement Learning and Large Language Models.} Journal of Artificial Intelligence Research, 2024. DOI: 10.1613/jair.1.15960.
 \item Yu Zeng, Kebei Jiang, Jie Chen. \textit{Automatic Seismic Salt Interpretation with Deep Convolutional Neural Networks.} Proceedings of the 2019 3rd International Conference on Information System \& Data Mining, pp. 16--20.
 \end{itemize}
