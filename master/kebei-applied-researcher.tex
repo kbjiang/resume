@@ -74,6 +74,23 @@ Applied Scientist with 6+ years at Microsoft specializing in LLM/VLM foundation 
 \item Designed a rigorous, controlled diagnostic to analyze shortcut learning and taxonomy memorization, evaluating the limits of domain adaptation versus base model behavior.
 \end{itemize}
 
+\heading{Multimodal Retrieval \& Vision-Language Modeling}{2024}
+\begin{itemize}
+\item Fine-tuned a Phi-3 Vision model on public chart datasets to optimize complex visual question answering performance.
+\item Evaluated cross-modal alignment and retrieval strategies using CLIP and SigLIP embeddings across distinct text, table, and image index spaces.
+\item Researched advanced structural retrieval frameworks, implementing query decomposition, ranking fusion, and tree/graph-based architectures including RAPTOR and GraphRAG.
+\end{itemize}
+
+\section*{Advanced AI Infrastructure \& Systems Engineering}
+\heading{CS336: Language Modeling from Scratch, Stanford}{2025}
+\begin{itemize}
+\item \textbf{Model \& Tokenizer Architecture:} Implemented all core components of a Transformer language model from scratch in PyTorch, including custom tokenization pipelines and optimization loops.
+\item \textbf{Distributed Training \& Triton Kernels:} Built a memory-efficient, distributed version of the training code and optimized attention layers by writing custom Triton kernels for FlashAttention-2.
+\item \textbf{Web-Scale Data Engineering:} Processed raw Common Crawl dumps into pretraining data by developing heuristic filtering and text deduplication pipelines.
+\item \textbf{Empirical Scaling Laws:} Profiled layer execution traces and queried training APIs to mathematically fit scaling laws to project downstream performance.
+\item \textbf{Reasoning \& Alignment Algorithms:} Programmed post-training alignment workflows, implementing SFT, DPO, and GRPO to train models to reason through math problems.
+\end{itemize}
+
 \section*{Publications}
 \begin{itemize}
 \item Guang Yang, Kebei Jiang, David P. Lundquist, Prerna Singh. \textit{Specification-to-Calibration: Synthetic Supervision for LLM Judges.} Manuscript in Preparation.
@@ -81,8 +98,16 @@ Applied Scientist with 6+ years at Microsoft specializing in LLM/VLM foundation 
 \item Yu Zeng, Kebei Jiang, Jie Chen. \textit{Automatic Seismic Salt Interpretation with Deep Convolutional Neural Networks.} Proceedings of the 2019 3rd International Conference on Information System \& Data Mining, pp. 16--20.
 \end{itemize}
 
+\section*{Patent}
+\begin{itemize}
+\item Yinheng Li, Kebei Jiang. \textit{Concurrent Labeling of Sequences of Words and Individual Words.} U.S. patent application, MS\# 411939-US-NP, 2022.
+\end{itemize}
+
+\section*{Education}
+\headingwtitle{Louisiana State University, Baton Rouge, LA}{PhD, Physics}{2007 -- 2014}
 
 \section*{Personal Projects}
+
 \heading{OptiBuild --- Domain-Agnostic Optimization Agent | Personal Project}{2026}
 \begin{itemize}
 \item Engineered a domain-agnostic multi-agent system that translates natural-language constraints into structured Operations Research models, enabling optimized component selection across arbitrary domains (e.g., PC hardware, drone components).
@@ -90,17 +115,6 @@ Applied Scientist with 6+ years at Microsoft specializing in LLM/VLM foundation 
 \item Designed a staged modelization and repair loop utilizing Pydantic contracts, deterministic validation protocols, and structured execution traces to handle infeasible models or missing data dynamically.
 \item Implemented rigorous automated testing and security controls, incorporating a 127-case offline regression suite, PII redaction layers, and strict safety gates for execution-level LLM queries and formulas.
 \end{itemize}
-
-\section*{Selected Technical Learning}
-\heading{CS336: Language Modeling from Scratch, Stanford}{2025}
-\begin{itemize}
-\item Implemented core components of large language models from scratch using PyTorch, including custom tokenization pipelines, Transformers architecture and pre-training data filtering diagnostics.
-\item Built and verified low-level architectural layers, including implementing FlashAttention-2 mechanics using Triton kernels.
-\item Programmed post-training alignment algorithms from scratch, including implementations of GRPO, DPO, and SFT frameworks.
-\end{itemize}
-
-\section*{Education}
-\headingwtitle{Louisiana State University, Baton Rouge, LA}{PhD, Physics}{2007 -- 2014}
 
 
 \end{document}
