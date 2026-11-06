@@ -28,7 +28,7 @@ Bellevue, WA \quad $\cdot$ \quad
 \section*{Core Expertise}
 \textbf{AI/ML:} LLMs $\cdot$ VLMs $\cdot$ Generative AI $\cdot$ Model Fine-Tuning $\cdot$ RAG $\cdot$ Agentic Systems $\cdot$ Deep Learning $\cdot$ NLP
 
-\textbf{Prompt Engineering \& Optimization:} Prompt Design $\cdot$ Specification-Driven Prompting $\cdot$ Algorithmic Prompt Optimization
+\textbf{Prompt Engineering:} Prompt Design $\cdot$ Specification-Driven Prompting $\cdot$ Algorithmic Prompt Optimization
 
 \textbf{Evaluation \& Data:} LLM-as-a-Judge Calibration $\cdot$ Systematic Agent Evaluation $\cdot$ Synthetic Data Generation $\cdot$ Telemetry Design & Analysis $\cdot$ Experiment Design $\cdot$ Statistical Modeling $\cdot$ Data Analysis
 
@@ -72,31 +72,29 @@ Bellevue, WA \quad $\cdot$ \quad
 \begin{itemize}
 \item Developed an accounting agent deployed to real users to resolve ledger--subledger reconciliation exceptions.
 \item Analyzed production telemetry to identify shifts in user behavior and built a proof of concept demonstrating the agent's ability to adapt.
-\item Built a synthetic benchmark with hundreds of LLM-generated transaction exceptions and ground-truth resolutions and tool-use paths; evaluated task success, tool-call accuracy, latency, and consistency across five runs.
+\item Built a synthetic benchmark with 400+ of LLM-generated transaction exceptions and ground-truth resolutions and tool-use paths; evaluated task success, tool-call accuracy, latency, and consistency across five runs.
 \item Improved benchmark realism by validating transaction-matching distributions with the PM, substantially improving evaluation results and establishing fixed offline regression tests.
 \end{itemize}
 
 \heading{VLM Fine-Tuning --- Taxonomy Generalization \& Shortcut-Learning Diagnostic}{2025}
 \begin{itemize}
 \item Designed a hierarchical taxonomy spanning hundreds of fashion-item classes and aligned it with GPT-4o's understanding of retail products; generated $\sim$1M synthetic training examples 
-\item Fine-tuned a Microsoft Phi-4-multimodal foundation model (5.6B) using PyTorch across multiple GPUs with LoRA, SFT, and DPO. Achieved $\sim$90\% accuracy against GPT-4o ground truths
+\item Fine-tuned a Microsoft Phi-4-multimodal foundation model (5.6B) using PyTorch across multiple GPUs with LoRA, SFT, and DPO. Achieved \textbf{$\sim$90\%} accuracy against GPT-4o ground truths
 \item Designed a rigorous, controlled diagnostic to analyze shortcut learning and taxonomy memorization, evaluating the limits of domain adaptation versus base model behavior.
 \end{itemize}
 
 \heading{Multimodal RAG --- Financial Insights Copilot}{2024}
 \begin{itemize}
-\item Built an end-to-end RAG system for content-rich financial PDFs, spanning document parsing, multimodal indexing, embeddings, retrieval, query decomposition, and knowledge-graph exploration; released as part of Microsoft Financial Insights Copilot.
-\item Identified table-parsing issues in complicated financial documents and explored normalization strategies for downstream processing; systematically evaluated BM25 configurations and reranking models, improving offline retrieval by $\sim$20\%.
-\item Explored separate text/table/image indices, ranking fusion, CLIP/SigLIP cross-modal matching, LlamaIndex query decomposition, and knowledge-graph/tree-based approaches including RAPTOR, KPG and GraphRAG.
+\item Built an end-to-end multimodal RAG pipeline for content-rich financial PDF reports, spanning document parsing and multimodal indexing; explored cross-modal retrieval and knowledge representation approaches including separate text/table/image indices, CLIP/SigLIP matching, ranking fusion, query decomposition, RAPTOR and GraphRAG; released as part of Microsoft Financial Insights Copilot.
+\item Addressed complex table-parsing and retrieval challenges through table-structure normalization, BM25 tuning, and reranking, achieving a \textbf{$\sim$20\% improvement} in offline retrieval performance.
 \item Fine-tuned a Phi-3 Vision model on public chart datasets for visual question answering.
 \end{itemize}
 
 \heading{End-to-End Knowledge Mining --- Multimodal Document Processing}{2022--2023}
 \begin{itemize}
-\item Led development of an end-to-end knowledge-mining solution for large multimodal document collections in the energy domain using Azure Cognitive Search.
-\item Designed and optimized indexing flows and custom AI skills spanning chart detection, document classification, entity recognition, and summarization; led a team of scientists and collaborated with PMs, customer engineers, and customers.
-\item Identified unnecessary intermediate image storage as a major document-processing bottleneck and redesigned the flow to detect and index image bounding boxes before cropping directly from raw documents, reducing parsing time by $\sim$80\%.
-\item Served AI skills for customer integration and supported technical questions and handoff.
+\item Led a team of ~5 scientists in developing an end-to-end knowledge-mining solution for large-scale multimodal document collections in the energy domain, spanning document classification, entity recognition, chart detection, and summarization.
+\item Identified and eliminated an intermediate image-storage bottleneck by redesigning the pipeline to index image bounding boxes and crop images directly from source documents, reducing document parsing time by \textbf{$\sim$80\%}.
+\item Designed and delivered custom AI enrichment skills for integration with Azure Cognitive Search, collaborating with product managers, customer engineers, and customers on technical requirements and implementation.
 \end{itemize}
 
 \heading{Rule-Based NER with spaCy}{2021}
@@ -108,7 +106,7 @@ Bellevue, WA \quad $\cdot$ \quad
 \heading{Automatic Seismic Salt Interpretation}{2018}
 \begin{itemize}
 \item Used a U-Net architecture to identify salt structures at pixel level in seismic data.
-\item Implemented stratified folding, ELU, and Lovasz Loss to improve precision; work was accepted by the 3rd International Conference on Information System \& Data Mining.
+\item Implemented stratified folding, ELU, and Lovasz Loss to improve prediction precision.
 \end{itemize}
 
 \section*{Personal Projects}
