@@ -26,22 +26,20 @@ Bellevue, WA \quad $\cdot$ \quad
 \vspace{-3pt}
 
 \section*{Core Expertise}
-\textbf{AI/ML:} LLMs $\cdot$ VLMs $\cdot$ Generative AI $\cdot$ Model Fine-Tuning $\cdot$ RAG $\cdot$ Agentic Systems $\cdot$ Deep Learning $\cdot$ NLP
+\textbf{AI/ML:} LLMs $\cdot$ VLMs $\cdot$ Generative AI $\cdot$ Model Post-Training $\cdot$ Knowledge Distillation $\cdot$ Information Retrieval $\cdot$ RAG $\cdot$ Agentic Systems $\cdot$ Prompt Optimization $\cdot$ NLP
 
-\textbf{Prompt Engineering:} Prompt Design $\cdot$ Specification-Driven Prompting $\cdot$ Algorithmic Prompt Optimization
+\textbf{Evaluation \& Data:} LLM-as-a-Judge Calibration $\cdot$ Systematic Agent Evaluation $\cdot$ Synthetic Data Generation $\cdot$ Telemetry Analysis $\cdot$ Experiment Design $\cdot$ Statistical Modeling 
 
-\textbf{Evaluation \& Data:} LLM-as-a-Judge Calibration $\cdot$ Systematic Agent Evaluation $\cdot$ Synthetic Data Generation $\cdot$ Telemetry Design & Analysis $\cdot$ Experiment Design $\cdot$ Statistical Modeling $\cdot$ Data Analysis
+\textbf{ML Frameworks \& Serving:} PyTorch $\cdot$ HF Transformers $\cdot$ spaCy $\cdot$ Distributed Training $\cdot$ Model Serving $\cdot$ Inference Optimization $\cdot$ vLLM $\cdot$ Triton
 
-\textbf{ML Frameworks \& Serving:} PyTorch $\cdot$ HF Transformers $\cdot$ Distributed Training $\cdot$ Model Deployment \& Serving $\cdot$ vLLM $\cdot$ spaCy
-
-\textbf{Tools \& Infrastructure:} Python $\cdot$ R $\cdot$ SQL $\cdot$ FastAPI $\cdot$ Docker $\cdot$ Git $\cdot$ Azure $\cdot$ GCP
+\textbf{Languages, Tools \& Cloud:} Python $\cdot$ SQL $\cdot$ FastAPI $\cdot$ Docker $\cdot$ Google Antigravity $\cdot$ GitHub Copilot $\cdot$ Azure
 
 \section*{Experience}
 \headingwtitle{Microsoft}{Senior Applied Scientist}{Jan 2020 -- Sep 2026}
 \begin{itemize}
-\item Developed and deployed LLM and VLM solutions spanning agentic AI, RAG, knowledge mining, information extraction, prompt engineering, and model fine-tuning.
-\item Designed evaluation methodologies and experiments for LLM-based agents and AI systems, including synthetic benchmarks, behavioral diagnostics, quantitative metrics, and regression evaluation.
-\item Developed production ML/AI systems in Python, with experience in FastAPI, Docker, automated testing, production monitoring, and collaborative code reviews.
+\item Took AI/ML applications from experimentation and prototyping to production, building and deploying RAG-based systems and agentic workflows, as well as developing model-training solutions for LLMs and VLMs.
+\item Designed AI-system evaluation using synthetic benchmarks, behavioral diagnostics, quantitative metrics, and offline regression tests.
+\item Built and maintained production AI/ML systems using Python, FastAPI, and Docker, with automated testing, production monitoring, and code reviews.
 \item Led technical development across scientists, PMs, engineers, architects, and customer engineers, including technical design, implementation reviews, technical decisions, and customer engagements.
 \end{itemize}
 
@@ -55,39 +53,40 @@ Bellevue, WA \quad $\cdot$ \quad
 
 \heading{Specification-to-Calibration: Synthetic Supervision for LLM Judges}{2026}
 \begin{itemize}
-\item Designed and evaluated a novel algorithmic approach for automated LLM judge calibration by compiling natural-language specifications into coverage-controlled behavioral contrast suites.
-\item Utilized feedback-conditioned and GEPA-based optimization to empirically demonstrate model adaptation, improving position-debiased accuracy by \textbf{3.58 pp} on LLMBar benchmarks.
-\item Developed and open-sourced an internal calibration repository utilized across multiple organization teams to automate the alignment of LLM judges against specification constraints.
+\item Designed an algorithmic approach for automated LLM judge calibration by compiling natural-language specifications into coverage-controlled behavioral contrast suites.
+\item Applied feedback-conditioned and GEPA-based optimization, improving position-debiased accuracy by \textbf{3.58 percentage points} on LLMBar benchmarks.
+\item Developed an internal calibration repository utilized across multiple organization teams to automate the alignment of LLM judges against specification constraints.
 
 
 \end{itemize}
 
 \heading{Period-Closing Skill --- Stateful, Multi-Turn Agent Evaluation}{2026}
 \begin{itemize}
-\item Developed an agentic skill for automating period-closing workflows involving due dates, calendars, worker assignments, and task dependencies.
-\item Built an evaluation framework with \textbf{30+ parameterized scenario templates} covering diverse failure modes; collaborated with the SMEs to validate scenario realism and coverage.
+\item Developed a production agentic skill for D365 F\&O to automate financial period-closing schedule generation involving due dates, calendars, worker assignments, and task dependencies.
+\item Built an evaluation framework with \textbf{30+ parameterized scenario templates} covering diverse failure modes; validated scenario realism and coverage with subject-matter experts.
 \item Created stateful, multi-turn test environments with pre-existing tasks, calendar constraints, and similarly named workers; simulated user responses to assess agent behavior across interaction turns.
 \item Evaluated both final task outcomes and agent execution traces across repeated runs; measured task success rate (TSR), tool-call accuracy, latency, token cost, and consistency.
 \end{itemize}
 
 \heading{Account Reconciliation Agent --- Synthetic Benchmark \& Adaptive Preference Monitoring}{2026}
 \begin{itemize}
-\item Developed an accounting agent deployed to real users to resolve ledger--subledger reconciliation exceptions.
+\item Authored and evaluated the initial versions of agentic skills for D365 F\&O Account Reconciliation Agent that resolves ledger--subledger reconciliation exceptions.
 \item Analyzed production telemetry to identify shifts in user behavior and built a proof of concept demonstrating the agent's ability to adapt.
-\item Built a synthetic benchmark with \textbf{400+} of transaction exceptions and ground-truth resolutions and tool-use paths; evaluated task success, tool-call accuracy, latency, and consistency across five runs.
-\item Improved benchmark realism by validating transaction-matching distributions with the PM, substantially improving evaluation results and establishing fixed offline regression tests.
+\item Built a synthetic benchmark with \textbf{400+} transaction exceptions with ground-truth resolutions and tool-use paths; evaluated task success, tool-call accuracy, latency, and consistency across five runs.
+\item Improved benchmark realism by validating transaction-matching distributions with the PM, improving evaluation results and establishing fixed offline regression tests.
 \end{itemize}
 
 \heading{VLM Fine-Tuning --- Taxonomy Generalization \& Shortcut-Learning Diagnostic}{2025}
 \begin{itemize}
 \item Designed a hierarchical taxonomy spanning hundreds of fashion-item classes and aligned it with GPT-4o's understanding of retail products; generated $\sim$1M synthetic training examples 
 \item Fine-tuned a Microsoft Phi-4-multimodal foundation model (5.6B) using PyTorch across multiple GPUs with LoRA, SFT, and DPO. Achieved \textbf{$\sim$90\%} accuracy against GPT-4o ground truths
-\item Designed a rigorous, controlled diagnostic to analyze shortcut learning and taxonomy memorization, evaluating the limits of domain adaptation versus base model behavior.
+\item Designed a controlled diagnostic to analyze shortcut learning and taxonomy memorization, evaluating domain adaptation versus base model behavior.
 \end{itemize}
 
 \heading{Multimodal RAG --- Financial Insights Copilot}{2024}
 \begin{itemize}
-\item Built an end-to-end multimodal RAG pipeline for content-rich financial PDF reports, spanning document parsing and multimodal indexing; explored cross-modal retrieval and knowledge representation approaches including separate text/table/image indices, CLIP/SigLIP matching, ranking fusion, query decomposition, RAPTOR and GraphRAG; released as part of Microsoft Financial Insights Copilot.
+\item Built an end-to-end multimodal RAG pipeline for content-rich financial PDF reports, spanning document parsing and multimodal indexing; released as part of Microsoft Financial Insights Copilot.
+\item Explored cross-modal retrieval and knowledge representation approaches including separate text/table/image indices, CLIP/EigLIP matching, ranking fusion, query decomposition, RAPTOR and GraphRAG.
 \item Addressed complex table-parsing and retrieval challenges through table-structure normalization, BM25 tuning, and reranking, achieving a \textbf{$\sim$20\% improvement} in offline retrieval performance.
 \item Fine-tuned a Phi-3 Vision model on public chart datasets for visual question answering.
 \end{itemize}
@@ -95,7 +94,7 @@ Bellevue, WA \quad $\cdot$ \quad
 \heading{End-to-End Knowledge Mining --- Multimodal Document Processing}{2022--2023}
 \begin{itemize}
 \item Led a team of scientists in developing an end-to-end knowledge-mining solution for large-scale multimodal document collections in the energy domain, spanning document classification, entity recognition, chart detection, and summarization.
-\item Identified and eliminated an intermediate image-storage bottleneck by redesigning the pipeline to index image bounding boxes and crop images directly from source documents, reducing document parsing time by \textbf{$\sim$80\%}.
+\item Redesigned document processing to eliminate intermediate image storage, using image-bounding-box indexing and on-demand cropping from source documents, reducing parsing time by approximately \textbf{$\sim$80\%}.
 \item Designed and delivered custom AI enrichment skills for integration with Azure Cognitive Search, collaborating with product managers, customer engineers, and customers on technical requirements and implementation.
 \end{itemize}
 
@@ -112,6 +111,14 @@ Bellevue, WA \quad $\cdot$ \quad
 \end{itemize}
 
 \section*{Personal Projects}
+\heading{From-Scratch Transformer Architecture \& Alignment Framework}{2025}
+\begin{itemize}
+\item Implemented all core components of a Transformer language model from scratch in PyTorch, including custom tokenization pipelines and optimization loops.
+\item Built a memory-efficient, distributed version of the training code and optimized attention layers by writing custom Triton kernels for FlashAttention-2.
+\item Processed raw Common Crawl dumps into pretraining data by developing heuristic filtering and text deduplication pipelines.
+\item Profiled layer execution traces and queried training APIs to mathematically fit scaling laws to project downstream performance.
+\item Programmed post-training alignment workflows, implementing SFT, DPO, and GRPO to train models to reason through math problems.
+\end{itemize}
 
 \heading{OptiBuild --- Domain-Agnostic Optimization Agent | Personal Project}{2026}
 \begin{itemize}
@@ -138,16 +145,6 @@ Bellevue, WA \quad $\cdot$ \quad
 \heading{Reinforcement Learning Specialization, Coursera}{2023}
 \begin{itemize}
 \item Completed the 4-course Reinforcement Learning Specialization (University of Alberta), mastering the foundations of adaptive learning systems, trial-and-error interactions, and probabilistic AI to design and implement end-to-end RL solutions.
-\end{itemize}
-
-\section*{Advanced AI Infrastructure \& Systems Engineering}
-\heading{CS336: Language Modeling from Scratch, Stanford}{2025}
-\begin{itemize}
-\item \textbf{Model \& Tokenizer Architecture:} Implemented all core components of a Transformer language model from scratch in PyTorch, including custom tokenization pipelines and optimization loops.
-\item \textbf{Distributed Training \& Triton Kernels:} Built a memory-efficient, distributed version of the training code and optimized attention layers by writing custom Triton kernels for FlashAttention-2.
-\item \textbf{Web-Scale Data Engineering:} Processed raw Common Crawl dumps into pretraining data by developing heuristic filtering and text deduplication pipelines.
-\item \textbf{Empirical Scaling Laws:} Profiled layer execution traces and queried training APIs to mathematically fit scaling laws to project downstream performance.
-\item \textbf{Reasoning \& Alignment Algorithms:} Programmed post-training alignment workflows, implementing SFT, DPO, and GRPO to train models to reason through math problems.
 \end{itemize}
 
 \section*{Education}
